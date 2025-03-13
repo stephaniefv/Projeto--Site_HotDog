@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.108.0">
+    <title>Página Administrativa</title>
+    <link rel="icon" href="https://cdn-icons-png.flaticon.com/512/900/900834.png">
+    <link href="css/offcanvas-navbar.css" rel="stylesheet">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/offcanvas-navbar/">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!-- Favicons -->
+</head>
+<body style="background-image: url(img/background.webp);">
+<!-- Menu -->
+<header>
+<nav class="navbar navbar-expand-lg fixed-top navbar-dark" aria-label="Main navigation" style="background-color: black;">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><img src="icon/LOGO.png" width="90%" height="90%"></a>
+    <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="homeAdm.html">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled">Disabled</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Cadastro</a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="cadastroadm.html">Cadastro de Administrador</a></li>
+            <li><a class="dropdown-item" href="cadastrofornecedor.html">Cadastro de Fornecedor</a></li>
+            <li><a class="dropdown-item" href="cadastroproduto.html">Cadastro de Produto</a></li>
+           
+          </ul>
+        </li>
+       </ul>
+      </div>
+     
+  </div>
+  <p class="p-2"></p>
+  <p class="p-2"></p>
+  <a href="admin.html"><img src="icon/logout.png" width="32px" height="32px"></a>
+  <p class="p-2"></p>
+</nav>
+</header>    
+<!-- Menu -->
+<p class="p-2"></p>
+<p class="p-2"></p>
+
+<main class="container">
+  <div class="d-flex align-items-center p-3 my-3 bg-warning rounded shadow-sm">
+    <img class="me-3" src="https://cdn-icons-png.flaticon.com/512/1/1374.png" alt="" width="48" height="48">
+    <div class="lh-1">
+      <h1 class="h6 mb-0 text-dark lh-1">Página Administrativa</h1>
+     </div>
+  </div>
+
+  <div class="my-3 p-3 bg-body rounded shadow-sm">
+    <h6 class="border-bottom pb-2 mb-0">Atualizações Recentes</h6>
+    <div class="d-flex text-muted pt-3">
+      <img src="https://cdn-icons-png.flaticon.com/512/5290/5290058.png" width="3%" height="3%">
+      <p class="pb-3 mb-0 small lh-sm border-bottom w-100">
+        <strong class="d-block text-gray-dark">@Admin1</strong>
+        Adicionou 3 novos fornecedores. <small><b>Sexta-feira, 27 de janeiro de 2023, 17:50H</b></small> 
+      </p>
+    </div>
+    <div class="d-flex text-muted pt-3">
+      <img src="https://cdn-icons-png.flaticon.com/512/5290/5290058.png" width="3%" height="3%">
+      <p class="pb-3 mb-0 small lh-sm border-bottom w-100">
+        <strong class="d-block text-gray-dark">@Admin2</strong>
+        Alterou o cadastro de 2 produtos. <small><b>Quinta-feira, 26 de janeiro de 2023, 13:00H</b></small> 
+      </p>
+    </div>
+    <div class="d-flex text-muted pt-3">
+      <img src="https://cdn-icons-png.flaticon.com/512/5290/5290058.png" width="3%" height="3%">
+      <p class="pb-3 mb-0 small lh-sm border-bottom w-100">
+        <strong class="d-block text-gray-dark">@Admin3</strong>
+        Adicionou 4 novos funcionários. <small><b>Terça-feira, 24 de janeiro de 2023, 08:00H</b></small>
+    </div>
+    <small class="d-block text-end mt-3">
+      <a href="#">Todas Atualizações</a>
+    </small>
+  </div>
+
+  <div class="my-3 p-3 bg-body rounded shadow-sm">
+    <h6 class="border-bottom pb-2 mb-0">Sugestões</h6>
+    <div class="d-flex text-muted pt-3">
+      <img src="https://cdn-icons-png.flaticon.com/512/2760/2760290.png" width="3%" height="3%">
+        <div class="pb-3 mb-0 small lh-sm border-bottom w-100">
+        <div class="d-flex justify-content-between">
+          <a href="listarFornecedor.php" style="text-decoration: none; color: black;"><strong class="text-gray-dark">Listar Fornecedores Cadastrados</strong></a>
+        </div>
+       </div>
+    </div>
+    <div class="d-flex text-muted pt-3">
+      <img src="https://cdn-icons-png.flaticon.com/512/2760/2760290.png" width="3%" height="3%">      
+      <div class="pb-3 mb-0 small lh-sm border-bottom w-100">
+        <div class="d-flex justify-content-between">
+          </div>
+          <a href="editFornecedor.html" style="text-decoration: none; color: black;"><strong class="text-gray-dark">Editar Cadastro de  Fornecedores</strong></a>
+        </div>
+    </div>
+    <div class="d-flex text-muted pt-3">
+      <img src="https://cdn-icons-png.flaticon.com/512/2760/2760290.png" width="3%" height="3%"> 
+       <div class="pb-3 mb-0 small lh-sm border-bottom w-100">
+        <div class="d-flex justify-content-between">
+          <a href="editProduto.html" style="text-decoration: none; color: black;"><strong class="text-gray-dark">Editar Cadastro de Produtos <small style="color: red;">(teste)</small></strong></a>
+          </div>
+        </div>
+    </div>
+    <div class="d-flex text-muted pt-3">
+      <img src="https://cdn-icons-png.flaticon.com/512/2760/2760290.png" width="3%" height="3%">
+        <div class="pb-3 mb-0 small lh-sm border-bottom w-100">
+        <div class="d-flex justify-content-between">
+          <a href="editProduto.html" style="text-decoration: none; color: black;"><strong class="text-gray-dark">Editar Cadastro de Administradores <small style="color: red;">(em construção)</small></strong></a>
+        </div>
+       </div>
+    </div>
+    <small class="d-block text-end mt-3">
+      <a href="#">Todas Sugestões</a>
+    </small>
+  </div>
+</main>
+
+<p class="p-1"></p>
+    <div class="row">
+        <div class="col-md text-center">
+         <footer style="background: black; height: 12rem;">
+<p class="p-1"></p>
+      <h6 style="color:white; padding:70px;"><small>Senac &copy; 2023</small></h6>
+      </div>
+ </footer>
+
+</div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+      <script src="js/offcanvas-navbar.js"></script>
+  </body>
+</html>

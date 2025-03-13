@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/Base.css">
+    <link rel="stylesheet" type="text/css" href="css/cadastro.css">
+    <link rel="icon" href="icon/LOGO.png">
+
+    <title>Cadastro de Administrador</title>
+    
+    <!-- <img src="img/LOGO1.webp" width="9%" height="9%" align="right"> -->
+
+</head>
+
+<body style="background-color:#524733;">
+    <style>
+        body {
+            background-image: url('img/background.webp');
+        }
+    </style>
+<nav class="navbar navbar-expand-lg navbar-dark" aria-label="Main navigation" style="background-color: black;">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="homeAdm.html"><img src="icon/LOGO.png" width="90%" height="90%"></a>
+      <button class="navbar-toggler p-0 border-0" type="button" id="navbarSideCollapse" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+  
+      <div class="navbar-collapse offcanvas-collapse" id="navbarsExampleDefault">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="homeAdm.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled">Editar Perfil</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Cadastro</a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="cadastroadm.html">Cadastro de Administrador</a></li>
+              <li><a class="dropdown-item" href="cadastrofornecedor.html">Cadastro de Fornecedor</a></li>
+              <li><a class="dropdown-item" href="cadastroproduto.html">Cadastro de Produto</a></li>
+             
+            </ul>
+          </li>
+         </ul>
+        <!-- <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Pesquisa" aria-label="Search">
+          <button class="btn btn-outline-warning" type="submit">Buscar</button>
+        </form> -->
+        </div>
+       
+    </div>
+    <p class="p-2"></p>
+    <p class="p-2"></p>
+    <a href="admin.html"><img src="icon/logout.png" width="32px" height="32px"></a>
+    <p class="p-2"></p>
+  </nav>
+
+
+<p class="p-2"></p>
+<p class="p-2"></p>
+
+
+    <!-- <nav class="nav nav-pills justify-content-start">
+        <a class="navbar-brand" href="admin.html">
+            <a style="width: 50px; height: 50px; margin: 10px; margin-top: 5px;background:0;"
+                class="nav-link nav-button active" href="admin.html"><img src="img/seta_esquerda.png" width="50rem"
+                    height="50rem"></a>
+            </li>
+            </ul> -->
+    </nav>
+    <div class="container text-center">
+        <img src="img/config.png" width=8% height=8% class="rounded" alt="...">
+    </div>
+    <div class="container-fluid col-sm-4 text-break">
+
+        <!-- Inicio do formulário -->
+        <form action="registroadm.php" method="post" id="formRegistro" class="cad">
+            <p class="p-1"></p>
+
+            <h4 class="text-break text-center">Cadastro de Administrador</h4>
+            <p class="p-1"></p>
+
+            <!-- primeira linha -->
+            <div class="row">
+                <div class="col-sm-5">
+                    <label>Nome Completo*</label>
+                    <input type="text" class="form-control is valid form-control-md" id="validationdefault01"
+                        name="nome" placeholder="Digite seu nome" required><br>
+                </div>
+                <div class="col-sm-4">
+                    <label>CPF*</label>
+                    <input type="text" class="form-control is valid form-control-md" id="cpf" name="cpf"
+                        placeholder="EX.:000.000.000-00" maxlength="14" autocomplet="off"
+                        keypress="somenteNumeros" required><br>
+                </div>
+                <div class="col-sm">
+                    <label>Departamento</label>    
+                    <select name="departamento" class="form-select form-select-md">
+                        <option selected>Selecione</option>
+                        <option value="1">Vendas</option>
+                        <option value="2">Adm</option>
+
+
+                    </select>
+                </div>
+            </div>
+
+
+
+            <!-- segunda linha -->
+            <div class="row">
+                <div class="col-sm-6">
+                    <label>E-mail*</label>
+                    <input type="email" class="form-control is valid form-control-md" id="validationdefault02"
+                        name="Email" placeholder="exemplo@mail.com" required><br>
+                </div>
+                <div class="col-sm">
+                    <label>Telefone*</label>
+                    <input type="tel" class="form-control" id="tel" name="telefone"
+                        placeholder="EX.:(00) 00000-0000" autocomplete="off" keypress="somenteNumeros" maxlength="14" onkeyup="formatarTelefone(event)" required>
+                </div>
+            </div>
+            <script src="./main.js"></script>
+
+
+            <!-- terceira linha -->
+            <div class="row">
+                <div class="col-sm-6">
+                    <label>Tipo de Logradouro*</label>
+                    <input type="text" class="form-control is valid form-control-md" id="validationdefault06"
+                        name="tp_logradouro" placeholder="Rua, Av.,Travessa, etc" required><br>
+                </div>
+                <div class="col-sm">
+                    <label>Logradouro*</label>
+                    <input type="text" class="form-control is valid form-control" id="validationdefault03"
+                        name="logradouro" placeholder="Nome do logradouro" required><br>
+                </div>
+            </div>
+
+            <!-- quarta linha -->
+            <div class="row">
+                <div class="col-sm-4">
+
+                    <label>Número*</label>
+                    <input type="text" class="form-control is valid form-control-md" id=""
+                        name="numero" placeholder="Número" keypress="somenteNumeros" autocomplete="off" required><br>
+                </div>
+                <div class="col-sm">
+                    <label>Complemento</label>
+                    <input type="text" class="form-control form-control-md" name="complemento"
+                        placeholder="Complemento">
+                    <br>
+                </div>
+            </div>
+
+            <!-- quinta linha  -->
+
+            <div class="row">
+                <div class="col-sm-6">
+                    <label>Bairro*</label>
+                    <input type="text" class="form-control is valid form-control-md" id="validationdefault03"
+                        name="bairro" placeholder="Bairro" required>
+                </div>
+                <div class="col-sm">
+                    <label>Município*</label>
+                    <input type="text" class="form-control is valid form-control-md" id="validationdefault03"
+                        name="municipio" placeholder="Município" required>
+                </div>
+            </div>
+
+            <!-- sexta linha -->
+
+            <p class="p-1"></p>
+            <div class="row">
+                <div class="col-sm-6">
+                    <label>CEP*</label>
+                    <input type="text" class="form-control is valid form-control-md" id="validationdefault03" name="cep"
+                        placeholder="Digite seu CEP" autocomplete="off" onkeyup="formatarCep(event)" maxlength="9" keypress="somenteNumeros" required>
+                </div>
+
+                <div class="col-sm">
+                    <label>Estado*</label>
+                    <!--<select class="form-select form-select-md">-->
+                    <input type="text" class="form-control is valid form-control-md" id="validationdefault03"
+                        name="estado" placeholder="Sigla do estado" maxlength="2" required>
+                    </div>
+            </div>
+            <p class="p-1"></p>
+            <div class="row">
+                <div class="col-sm-12">
+                    <label>Senha*</label>
+                    <input type="password" class="form-control is valid form-control-md" id="validationdefault03"
+                        name="senha" placeholder="Senha" required><small id="passwordHelpInline" class="text-muted-" style="color: #c99c5e;">
+                            Deve ter entre 6 e 12 caracteres.
+                          </small>
+                </div>
+            </div>
+
+    </div>
+    <div class="text-center">
+        <p class="p-1"></p>
+        <button class="btn btn-lg border-none" style="background-color:#c99c5e; color: black; " type="submit">Cadastrar
+            Usuário</button>
+        <p class="p-1"></p>
+        <p class="p-3"></p>
+    </div>
+    </nav>
+    </div>
+    </div>
+    </form>
+    </div>
+   
+        <div class="row">
+            <div class="col-md text-center">
+             <footer style="background: black; height: 12rem;">
+   <p class="p-1"></p>
+          <h6 style="color:white; padding:70px;"><small>Senac &copy; 2023</small></h6>
+          </div>
+
+     </footer>
+
+    </div>
+  </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-u1OknCvxWvY5kfmNBILK2hRnQC3Pr17a+RTT6rIHI7NnikvbZlHgTPOOmMi466C8"
+        crossorigin="anonymous"></script>
+        <script src="mascaras.js"></script>
+    </body>
+    </html>
